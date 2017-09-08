@@ -2,7 +2,7 @@
 # Load and Summarise the Australian General Record of Incidence of Mortality
 # (GRIM) data.
 #
-# Write out the summarised data for use in in the Shiny App to plot the data.
+# Write out the seleccted summary records for use in in the Shiny App to plot the data.
 #
 # There are nearly 300,000 records in the raw data set compared to nearly
 # 10,000 in the summarised data set.
@@ -49,6 +49,6 @@ deathTotals$sex <- ifelse(deathTotals$sex == "Persons", "Total", deathTotals$sex
 # 5 1908 All causes combined Females  19794
 # 6 1908 All causes combined   Total  46426
 #
-# Write out the summary data
+# Write out the summary records
 #
 write.csv(x=deathTotals, file = "./deathTotals.csv", row.names = FALSE)
